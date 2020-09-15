@@ -1,0 +1,25 @@
+<!--pages/myWords/myWords.wxml-->
+<navigator url="../addWord/addWord?currentPage={{currentPage}}" ><button>添加单词</button></navigator>
+<view wx:for="{{words}}" wx:key="name">
+  <view class="container">
+    <view class="Form" >
+      <navigator url="../wordDetail/wordDetail?answer={{answers[index]}}" class="tapable">{{item}}</navigator>
+      <image wx:if="{{unfold[index]}}" src='../../images/unfold.png' class="unfoldIcon" data-index="{{index}}" bindtap="revealAnswers"></image>
+      <image wx:else src='../../images/unfold2.png' class="unfoldIcon" data-index="{{index}}" bindtap="revealAnswers"></image>
+      <view hidden="{{unfold[index]}}" class="word">
+        {{answers[index]}}
+      </view>
+   </view>
+    <view hidden="{{unfold[index]}}" class="unfold"> 
+      <view class="hiddenRow">
+        <navigator class="unfoldButtons"url="../editWord/editWord?currentPage={{currentPage}}&oldAnswer={{answers[index]}}&oldName={{item}}">
+          <button>Edit</button>
+        </navigator>
+        
+        <button class="unfoldButtons" bindtap="deleteWord" data-word="{{item}}" data-currentPage="{{currentPage}}">delete</button>        
+      </view>
+    </view>
+  </view>
+
+  
+</view>

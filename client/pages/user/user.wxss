@@ -1,0 +1,47 @@
+/* pages/user/user.wxss */
+.buttons{
+  width:100%;
+  display: flex;
+}
+.formsubmit{
+  width:50%;
+}
+.container{
+  width:99%;
+  border: 1rpx solid black;
+  margin-bottom:10rpx;
+  background-color: rgb(214, 194, 194);
+}
+.Form{
+  width:98%;
+  height: 100rpx;
+  display:flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.tapable{
+  width:90%;
+}
+.unfoldIcon{
+  z-index: 1;
+  position: relative;
+  margin-right: 0rpx;
+  height:100%;
+  width: 10%;
+}
+.unfold{
+  width:98%;
+  margin-top:10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.hiddenRow{
+  display:flex;
+  flex-direction: row;
+  width:100%;
+}
+.unfoldButtons{
+  width:50%;
+}

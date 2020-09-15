@@ -1,0 +1,10 @@
+{
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wx23927a1c67b30540",
+	"projectname": "php%E5%8D%95%E8%AF%8D%E5%8D%A1%E6%97%A0server",
+	"condition": {}
+}

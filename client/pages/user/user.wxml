@@ -1,0 +1,50 @@
+<!--pages/user/user.wxml-->
+<view class="userinfo">
+   <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" 
+   style="border:0px solid red;background-color:#fff;width:330rpx;" plain='true'>
+     <image src="/images/user.png"  style="width:200rpx;height:200rpx;"/> 
+     <view>请点击头像登录</view>
+     </button>
+ </view>
+<button bindtap="setForm">添加词表</button>
+<form  hidden="{{showForm}}" bindsubmit="formSubmit" bindreset="formReset">
+  <input class="inputs" placeholder='请输入表的名字' name='name' value="{{inputValue}}"></input>
+  <view class="buttons">
+  <button formType='submit' class="formsubmit">确认</button>
+  <button formType='reset' class="formsubmit">取消</button>
+  </view>
+</form>
+<view wx:for="{{deck}}" wx:key="name" style="left:20rpx">
+  <view class="container" >
+    <view class="Form" >
+      <navigator url="../myWords/myWords?currentPage={{item}}" class="tapable">{{item}}</navigator>
+      <image wx:if="{{unfold[index]}}" src='../../images/unfold.png' class="unfoldIcon" data-index="{{index}}" bindtap="revealChoices"></image>
+      <image wx:else src='../../images/unfold2.png' class="unfoldIcon" data-index="{{index}}" bindtap="revealChoices"></image>
+
+   </view>
+    <view hidden="{{unfold[index]}}" class="unfold">
+      <view class="hiddenRow">
+        <navigator class="unfoldButtons"url="../review/review?currentPage={{item}}">
+          <button>friends</button>
+        </navigator>
+        
+        <navigator class="unfoldButtons"url="../review/review?currentPage={{item}}">
+          <button >review</button>
+        </navigator>
+      </view>
+      <view class="hiddenRow">
+          <button class="unfoldButtons" bindtap="deleteDeck" data-name="{{item}}">delete</button>
+          <button class="unfoldButtons" bindtap="renameDeck" data-index="{{index}}">rename</button>
+      </view>
+    </view>
+    
+  </view>
+  <form hidden='{{renameUnfold[index]}}' bindsubmit="renameformSubmit" bindreset="renameformReset" data-oldname="{{item}}">
+  <input class="inputs" placeholder='请输入表的新名字' name='newname' value="{{inputValue}}"></input>
+  <view class="buttons">
+  <button formType='submit' class="formsubmit">确认</button>
+  <button formType='reset' class="formsubmit">取消</button>
+  </view>
+</form>
+</view>
+

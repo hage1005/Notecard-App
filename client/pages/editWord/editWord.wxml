@@ -1,0 +1,9 @@
+<!--pages/editWord/editWord.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="word"><input placeholder='word' name="word" value="{{oldName}}"></input></view>
+<view class="answer"><input placeholder='注解' name="answer" value="{{oldAnswer}}"></input></view>
+<view class="buttons">
+  <button form-type='submit' class="formsubmit">提交</button>
+  <button form-type='reset' class="formsubmit">重置</button>
+</view>
+</form>

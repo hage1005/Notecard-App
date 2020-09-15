@@ -1,0 +1,36 @@
+<!--pages/review/review.wxml-->
+<view>{{currentWord}}</view>
+
+<view class="container" data-index="0" bindtap='judge'>
+    <view class="unfold"> 
+      {{choices[0]}}
+    </view>
+    <image hidden='{{iconTest[0]}}' src='../../images/correct.png' class="Icon"></image>
+    <image hidden='{{iconTest[1]}}' src='../../images/incorrect.png' class="Icon"></image>
+</view>
+
+<view class="container" data-index="1" bindtap='judge'>
+    <view class="unfold"> 
+      {{choices[1]}}
+    </view>
+    <image hidden='{{iconTest[2]}}' src='../../images/correct.png' class="Icon"></image>
+    <image hidden='{{iconTest[3]}}' src='../../images/incorrect.png' class="Icon"></image>
+</view>
+
+<view class="container" data-index="2" bindtap='judge'>
+    <view class="unfold"> 
+      {{choices[2]}}
+    </view>
+    <image hidden='{{iconTest[4]}}' src='../../images/correct.png' class="Icon"></image>
+    <image hidden='{{iconTest[5]}}' src='../../images/incorrect.png' class="Icon"></image>
+</view>
+
+<view class="container" data-index="3" bindtap='judge'>
+    <view class="unfold"> 
+      {{choices[3]}}
+    </view>
+    <image hidden='{{iconTest[6]}}' src='../../images/correct.png' class="Icon"></image>
+    <image hidden='{{iconTest[7]}}' src='../../images/incorrect.png' class="Icon"></image>
+</view>
+
+<button bindtap='next' class="next">下一题</button>

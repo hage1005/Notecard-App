@@ -1,0 +1,28 @@
+/* pages/review/review.wxss */
+.container{
+  width:99%;
+  height:100rpx;
+  border: 1rpx solid black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(214, 194, 194);
+  margin-top: 10rpx;
+}
+
+.Icon{
+  z-index: 1;
+  position: absolute;
+  right: 10rpx;
+  height:90rpx;
+  width: 90rpx;
+}
+.next{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.unfold{
+
+}

@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/user/user",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/myWords/myWords",
+    "pages/addWord/addWord",
+    "pages/wordDetail/wordDetail",
+    "pages/review/review",
+    "pages/editWord/editWord"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "我的单词",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/main2.png",
+        "iconPath": "images/main.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/user2.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/user/user",
+        "text": "用户"
+      }
+    ]
+  }
+}
